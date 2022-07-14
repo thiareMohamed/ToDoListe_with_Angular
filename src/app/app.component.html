@@ -7,5 +7,14 @@
     </nav>
   </header>
 
-<h2 class="p-3 mt-3">{{title}}</h2>
+  <div class="p-3 mt-3 d-flex justify-content-between">
+    <h2>{{title}}</h2>
+    <button class="btn btn-dark">
+      Ajouter une Tache
+    </button>
+  </div>
+
+  <div class="p-4">
+    <app-form-ajout-tache></app-form-ajout-tache>
+  </div>
 </section>
