@@ -7,4 +7,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ToDo Application';
+  titleListe = 'Liste des taches'
+  myVar = false
+
+  showForm(){
+      if (this.myVar == false){
+        this.myVar = true
+      }
+      else {
+        this.myVar = false
+      }
+  }
+
 }

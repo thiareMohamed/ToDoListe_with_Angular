@@ -1,20 +1,26 @@
 <section class="container">
-  <header class="row w-100">
+  <header class="row">
     <nav class="p-3 d-flex justify-content-between shadow-sm align-items-center">
-      <img class="" src="./assets/todo.png">
+      <img src="./assets/todo.png">
 
       <h4>Mohamed THIARE</h4>
     </nav>
   </header>
 
-  <div class="p-3 mt-3 d-flex justify-content-between">
-    <h2>{{title}}</h2>
-    <button class="btn btn-dark">
-      Ajouter une Tache
-    </button>
-  </div>
+ <div class="border">
+   <div class="p-3 mt-3 d-flex justify-content-between">
+     <h2>{{title}}</h2>
+     <button class="btn btn-dark"
+              (click)="showForm()">
+       Ajouter une Tache
+     </button>
+   </div>
 
-  <div class="p-4">
-    <app-form-ajout-tache></app-form-ajout-tache>
-  </div>
+   <div class="p-4 form" [hidden]="!myVar">
+     <app-form-ajout-tache></app-form-ajout-tache>
+   </div>
+   <div class="p-3 mt-3">
+     <h2>{{titleListe}}</h2>
+   </div>
+ </div>
 </section>
