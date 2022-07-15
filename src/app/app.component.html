@@ -17,10 +17,14 @@
    </div>
 
    <div class="p-4 form" [hidden]="!myVar">
-     <app-form-ajout-tache></app-form-ajout-tache>
+     <app-form-ajout-tache (newtask)="showTaskFromForm($event)"></app-form-ajout-tache>
    </div>
    <div class="p-3 mt-3">
-     <h2>{{titleListe}}</h2>
+     <h2 class=" mb-5">{{titleListe}}</h2>
+
+
+     <app-carte [dataTasks]="showTask()" [newTask]="task"></app-carte>
    </div>
+
  </div>
 </section>

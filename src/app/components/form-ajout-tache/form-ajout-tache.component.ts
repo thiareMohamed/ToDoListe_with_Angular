@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Output, EventEmitter } from '@angular/core';
+import {FormControl, FormGroup, Validators} from "@angular/forms";
 
 @Component({
   selector: 'app-form-ajout-tache',
@@ -7,9 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormAjoutTacheComponent implements OnInit {
 
+  @Output() newtask = new EventEmitter();
+
+  taskForm = new FormGroup({
+    title: new FormControl(null, Validators.required),
+    date: new FormControl(null, Validators.required),
+    description: new FormControl(null, Validators.required)
+  })
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  showData(){
+    this.newtask.emit(this.taskForm.value)
+    this.taskForm.reset()
+  }
 }
