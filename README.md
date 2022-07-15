@@ -1,3 +1,6 @@
+<p align="center"><img src="https://user-images.githubusercontent.com/92308305/179212317-83bf022f-6e5d-496e-8abf-bf1f873e2b2f.png" width="30%" height="30%"></p>
+This is a TODO liste application with angular in the frontend
+
 # TestAngular
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.6.
